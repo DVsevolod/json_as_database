@@ -51,5 +51,5 @@ user = database.call(
 )
 ```
 
-A more detailed usage example can be found in the `example\client_storage.py` directory.
+#### A more detailed usage example can be found in the `example\client_storage.py` directory.
 ----
