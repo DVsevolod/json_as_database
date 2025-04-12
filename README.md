@@ -1,12 +1,12 @@
 # JSON as DataBase
 
 This simple class allows you to store data in a json-file.
-CRUD functionality is implemented and supports all standard operations:
-    `create` to add object to the file,
-    `get`    to get object from the file, 
-    `update` to update object in the file,
-    `delete` to delete object in the file,
-    `pop`    to cut to get object from the file
+CRUD functionality is implemented and supports all standard operations:\n
+    \t`create` to add object to the file,\n
+    \t`get`    to get object from the file, \n
+    \t`update` to update object in the file,\n
+    \t`delete` to delete object in the file,\n
+    \t`pop`    to cut to get object from the file
 ____
 
 ## Usage 
