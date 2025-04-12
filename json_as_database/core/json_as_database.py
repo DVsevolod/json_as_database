@@ -34,6 +34,14 @@ class JSONasDataBase:
             self.storage.update({key: value})
             return self.storage
 
+        @file_processing(self)
+        def update(key, value):
+            if key in self.storage:
+                self.storage.pop(key)
+                self.storage[key] = value
+                return self.storage
+            return self.storage
+
         @file_reading(self)
         def get(key):
             return self.storage.get(key)
@@ -43,8 +51,10 @@ class JSONasDataBase:
             if key in self.storage:
                 return self.storage.pop(key)
 
-        if operation in ['create', 'update']:
+        if operation == 'create':
             create(key, value)
+        elif operation == 'update':
+            update(key, value)
         elif operation == 'get':
             return get(key)
         elif operation == 'delete':

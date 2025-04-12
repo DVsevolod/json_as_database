@@ -41,7 +41,7 @@ class ClientStorage:
 
     def update(self, client_id, data):
         client_obj = self.database.call(
-            operation='pop',
+            operation='get',
             key=client_id
         )
         if client_obj is not None:
@@ -49,7 +49,11 @@ class ClientStorage:
                 if key in client_obj:
                     client_obj[key] = val
 
-            self.add(client_obj)
+            self.database.call(
+                operation='update',
+                key=client_id,
+                value=client_obj
+            )
         else:
             return "user does not exist"
 
@@ -87,7 +91,7 @@ if __name__ == '__main__':
 
     # update client
     # updated_items = {'is_active': False}
-    # client_storage.update(client_id='100100', data=updated_items)
+    # client_storage.update(client_id="100100", data=updated_items)
 
     # delete client
     # client_storage.delete("100104")
