@@ -1,12 +1,12 @@
 # JSON as DataBase
 
 This simple class allows you to store data in a json-file.
-CRUD functionality is implemented and supports all standard operations:\n
-    \t`create` to add object to the file,\n
-    \t`get`    to get object from the file, \n
-    \t`update` to update object in the file,\n
-    \t`delete` to delete object in the file,\n
-    \t`pop`    to cut to get object from the file
+CRUD functionality is implemented and supports all standard operations:
+- `create` to add object to the file,
+- `get`    to get object from the file, 
+- `update` to update object in the file,
+- `delete` to delete object in the file,
+- `pop`    to cut to get object from the file
 ____
 
 ## Usage 
@@ -27,9 +27,9 @@ database = JSONasDataBase('my_file.json')
 The class has only one method `call(operation, key, value)` for interacting with the file. 
 This method takes 3 arguments: `operation`, `key`, `value`.
 
-`operation` - string, one of the CRUD operations: `create`, `get`, `update`, `delete`, `pop`;
-`key` - key for/in json-file used as database;
-`value` - value for json-file used as database.
+- `operation` - string, one of the CRUD operations: `create`, `get`, `update`, `delete`, `pop`;
+- `key` - key for/in json-file used as database;
+- `value` - value for json-file used as database.
 
 Example:
 ```Python
