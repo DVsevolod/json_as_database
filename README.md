@@ -50,3 +50,6 @@ user = database.call(
     key=data.get('user_id')
 )
 ```
+
+A more detailed usage example can be found in the `example\client_storage.py` directory.
+----
